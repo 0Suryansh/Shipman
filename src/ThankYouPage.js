@@ -372,7 +372,7 @@ export default () => {
             ) : null}
             {activeStep === 2 ? (
               <Box sx={{ width: "50%" }}>
-                <Description>Share this below link to your SELLER. Once they complete their details we will collect order from them and bring to you.</Description>
+                <Description>Click on Finish and you will be all set from your side.</Description>
 
               </Box>
             ) : null}
