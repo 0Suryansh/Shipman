@@ -1,15 +1,18 @@
-import React from "react";
+import React, {useEffect} from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
 //eslint-disable-next-line
 import { css } from "styled-components/macro";
 
 import Header from "../headers/light.js";
+import { UserAuth } from '../../context/AuthContext.js';
+import { useNavigate } from 'react-router-dom';
+
 
 import { ReactComponent as SvgDecoratorBlob1 } from "../../images/svg-decorator-blob-1.svg";
 import DesignIllustration from "../../images/design-illustration-2.svg";
 import CustomersLogoStripImage from "../../images/customers-logo-strip.png";
-
+import GoogleButton from "react-google-button";
 export const NavLink = tw.a`
   text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
   font-semibold tracking-wide transition duration-300
@@ -57,6 +60,24 @@ const CustomersLogoStrip = styled.div`
 `;
 
 export default ({ roundedHeaderButton }) => {
+
+  const { googleSignIn, user } = UserAuth();
+  const navigate = useNavigate();
+
+  const handleGoogleSignIn = async () => {
+    try {
+      await googleSignIn();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    if (user && Object.keys(user).length > 0) {
+      navigate('/dashboard');
+    }
+  }, [user]);
+
   return (
     <>
       <Header roundedHeaderButton={roundedHeaderButton} />
@@ -72,8 +93,9 @@ export default ({ roundedHeaderButton }) => {
             <Paragraph>The solution is to send your own Delivery Partner to seller's location for bringing the order rather letting seller sending you delivery.</Paragraph>
             <Paragraph>But if you do so, then buyers will start scamming sellers. ShipMAN comes here to help both from scams.</Paragraph>
             <Actions>
-              <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} href="https://wa.me/+916306732445">Talk to me on Whatsapp</PrimaryLink>
+              <GoogleButton onClick={handleGoogleSignIn}/>
             </Actions>
+
             <CustomersLogoStrip>
               <p></p>
               {/* <img src={CustomersLogoStripImage} alt="Our Customers" /> */}
