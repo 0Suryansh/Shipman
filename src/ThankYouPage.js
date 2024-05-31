@@ -320,7 +320,7 @@ export default () => {
             <br />
             <hr />
             {activeStep === 0 ? (
-              <Box sx={{ width: "50%" }}>
+              <Box sx={{ width: "100%" }}>
                 <Description>Enter the Delivery address where order needs to be shipped.</Description>
                 <TextField id="outlined-basic" label="Country" disabled variant="outlined" defaultValue="India" fullWidth sx={{ marginBottom: 2, marginTop: 2 }} />
                 <Box sx={{ display: "flex", justifyContent: "space-between" }}>
@@ -356,7 +356,7 @@ export default () => {
             ) : null}
 
             {activeStep === 1 ? (
-              <Box sx={{ width: "50%" }}>
+              <Box sx={{ width: "100%" }}>
                 <ul>
                   <li>Any transaction you place, it will be in COD mode for now.</li>
                   <li>An advance Payment of ₹50 will be collected from buyers, that whole amount will refunded to them when order will be delivered. </li>
@@ -371,7 +371,7 @@ export default () => {
               </Box>
             ) : null}
             {activeStep === 2 ? (
-              <Box sx={{ width: "50%" }}>
+              <Box sx={{ width: "100%" }}>
                 <Description>Click on Finish and you will be all set from your side.</Description>
 
               </Box>

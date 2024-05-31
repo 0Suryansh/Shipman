@@ -361,7 +361,7 @@ export default () => {
                             <br />
                             <hr />
                             {activeStep === 1 ? (
-                                <Box sx={{ width: "50%" }}>
+                                <Box sx={{ width: "100%" }}>
                                     <Description>Enter the pickup address where ShipMAN will pick order up from.</Description>
                                     <TextField id="outlined-basic" label="Country" disabled variant="outlined" defaultValue="India" fullWidth sx={{ marginTop: 2, marginBottom: 2 }} />
                                     <Box sx={{ display: "flex", justifyContent: "space-between" }}>
@@ -397,7 +397,7 @@ export default () => {
                             ) : null}
 
                             {activeStep === 0 ? (
-                                <Box sx={{ width: "50%" }}>
+                                <Box sx={{ width: "100%" }}>
                                     <ul>
                                         <li>Your buyer {transactionData?.B_First_Name} {transactionData?.B_Last_Name} has deposited advance amount of ₹70 with us, showing their seriousness in purchase, Hence VERY VERY low chance of order refusal.</li>
 
@@ -409,7 +409,7 @@ export default () => {
                                 </Box>
                             ) : null}
                             {activeStep === 2 ? (
-                                <Box sx={{ width: "50%" }}>
+                                <Box sx={{ width: "100%" }}>
                                     <Description>Clcik on Finish, and you will all set, we will come and pick up the product from your Doorstep.</Description>
 
                                 </Box>
