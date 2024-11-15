@@ -30,6 +30,8 @@ const LeftColumn = tw.div`relative lg:w-5/12 text-center max-w-lg mx-auto lg:max
 const RightColumn = tw.div`relative lg:mt-0 flex-1 flex flex-col justify-center lg:self-end`;
 
 const Heading = tw.h1`font-bold text-3xl md:text-3xl lg:text-4xl xl:text-5xl text-gray-900 leading-tight`;
+const Heading3 = tw.h3`font-bold text-3xl md:text-3xl lg:text-4xl xl:text-5xl text-gray-900 leading-tight`;
+
 const Paragraph = tw.p`my-5 lg:my-8 text-base xl:text-lg`;
 
 const Actions = styled.div`
@@ -87,6 +89,9 @@ export default ({ roundedHeaderButton }) => {
             <Heading>
               Feeling less <span tw="text-primary-500">TRUST</span> on online <span tw="text-primary-500">sellers</span> but can't miss the deal ?
             </Heading>
+            <Heading3>
+              Currently live in MUMBAI only
+            </Heading3>
             <Paragraph>
               I myself, have been scammed <span tw="text-primary-500">3 times</span> while shopping online from <span tw="text-primary-500">Instagram sellers</span> and on <span tw="text-primary-500">Reddit</span>.
             </Paragraph>
