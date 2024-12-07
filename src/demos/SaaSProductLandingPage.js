@@ -29,7 +29,7 @@ export default () => {
         subheading={<Subheading>VALUES</Subheading>}
         heading={
           <>
-            ShipMAN will refund back <HighlightedText>your money</HighlightedText> incase of SCAM!
+            ShipMAN will refund back <HighlightedText>your token money</HighlightedText> incase of SCAM!
           </>
         }
         imageSrc={prototypeIllustrationImageSrc}
@@ -38,7 +38,7 @@ export default () => {
           {
             Icon: BriefcaseIcon,
             title: "Send your own Delivery Partner",
-            description: "ShipMAN on your behalf will send delivery partner to seller's location for order pickup, If sellers do not show up then it is a scam, Your money will be refunded in that case. Else your order will be deliverd to you soon. ",
+            description: "ShipMAN on your behalf will send delivery partner to seller's location for order pickup, If sellers do not show up then it is a scam, Your token money will be refunded in that case. Else your order will be deliverd to you soon. ",
             iconContainerCss: tw`bg-red-300 text-red-800`
           },
           {
@@ -144,7 +144,7 @@ export default () => {
           {
             question: "What is ShipMAN ?",
             answer:
-              "ShipMAN will send a delivery partner to seller's location for picking up your product. if seller do not ship the order, Meaning it was a potential scam. Hence your money will be refunded."
+              "ShipMAN will send a delivery partner to seller's location for picking up your product. if seller do not ship the order, Meaning it was a potential scam. Hence your token money will be refunded."
           },
           {
             question: "How to access and use ShipMAN ?",
