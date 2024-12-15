@@ -98,7 +98,7 @@ export default ({ roundedHeaderButton }) => {
             <Paragraph>The solution is to send your own Delivery Partner to seller's location for bringing the order rather letting seller sending you delivery.</Paragraph>
             <Paragraph>But if you do so, then buyers will start scamming sellers. ShipMAN comes here to help both from scams.</Paragraph>
             <Actions>
-              <GoogleButton onClick={handleGoogleSignIn}/>
+              <GoogleButton style={{margin:"auto"}} onClick={handleGoogleSignIn}/>
             </Actions>
 
             <CustomersLogoStrip>
