@@ -109,6 +109,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AuthContextProvider } from './context/AuthContext';
 import Protected from "components/headers/protected";
 import Seller from "pages/Seller";
+import ContactUsPage from "pages/ContactUs.js";
+import PrivacyPolicyPage from "pages/PrivacyPolicy.js";
+import TermsOfServicePage from "pages/TermsOfService.js";
 export default function App() {
   // If you want to disable the animation just use the disabled `prop` like below on your page's component
   // return <AnimationRevealPage disabled>xxxxxxxxxx</AnimationRevealPage>;
@@ -129,6 +132,9 @@ export default function App() {
 
             } />
             <Route path="/" element={<SaaSProductLandingPage />} />
+            <Route path="/contact-us" element={<ContactUsPage />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+            <Route path="/terms-of-service" element={<TermsOfServicePage />} />
             <Route path="/seller" element={<Seller />}/>
           </Routes>
         </Router>
